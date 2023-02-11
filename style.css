@@ -56,6 +56,10 @@ body {
   margin-bottom: 40px;
 }
 
+.row3 h2::after {
+  width: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -85,22 +89,34 @@ h1 {
     line-height: 58px;
 }
 
-h2 {
+h2,
+.afterh2-mobile {
   color: var(--color2);
     font-size: 30px;
     position: relative;
     text-align: center;
 }
 
-h2::after {
+h2::after,
+.afterh2-mobile::after {
   content: "";
-  width: 4.75%;
+  width: 60px;
   height: 3px;
   background-color: var(--color4);;
   position: absolute;
   top: 60px;
-  right: 48%;
+  right: 42%;
 }
+
+.afterh2-mobile::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--color4);;
+  position: absolute;
+  top: 110px;
+  right: 42%;
+} 
 
 h3 {
     color: var(--color2);
@@ -373,13 +389,10 @@ header {
 /*-----third section---------*/
 
    #clients {
-    background-color: var(--color5);
-    background-image: url("img/bgbg.webp");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-block: 35px;
+    background-image:
+    url('img/bgbg.webp'),
+    linear-gradient(to bottom, #0e121b 10%, #383b42 50%, #0e121b 100% );
+    padding-block: 95px;
    }
 
    .client-projects {
@@ -412,6 +425,7 @@ header {
    }
 
    /*----------4th--------------*/
+
 
    .pricecards {
     margin-top: 60px;
@@ -458,23 +472,48 @@ header {
 
   /*---------------*/
 
+  /*-------------------*/
+
+  #grow-with-us {
+    background-image: url('img/bgbg.webp'),
+    linear-gradient(to bottom, #0e121b 1%, #2a2335 60%, #0e121b 100% );
+    margin-bottom: 250px;
+    padding-block: 40px;
+  }
+
+  .grow-box {
+    background-color: transparent;
+    width: 80%;
+    text-align: center;
+    margin-inline: auto;
+    border-radius: 10px;
+  }
+
+
+
+
+
+
+
+    /*-------------------*/
   
   #contact {
-    background: linear-gradient(90deg, #0e121b, rgba(255,0,0,0) 70.71%),
-                linear-gradient(360deg, #0e121b, #203681 70.71%),
-                linear-gradient(150deg, #0e121b, #203681 7.71%);
    
-    padding-block: 35px;
+    background-image: url('img/bgbg.webp'),
+    linear-gradient(to bottom, #0e121b 1%, #203681 50%, #0e121b 100% );
+    background-attachment: fixed;
+    background-size: cover;
+    padding-block: 135px;
   }
 
   #contact h2,
   #contact h3,
   #contact p,
   #contact i {
-    color:white
+    color: white;
   }
 
-  .grid-container2 .contact-box {
+   .contact-box {
     width: 300px;
     max-width: 400px;
     margin-block: 50px;
@@ -790,8 +829,8 @@ footer p {
 .hidden3 {
   opacity: 0;
   filter: blur(2px);
-  transform: translateY(-5%);
-  transition: ease-out .7s;
+  transform: translateY(-10%);
+  transition: ease-out .8s;
 }
 
 
@@ -981,14 +1020,18 @@ footer p {
       font-size: 50px;
   }
 
+  .afterh2-mobile::after,
+  h2::after {
+    top: 60px;
+    right: 48.3%;
+  }
+
   .pricecard {
     width: 40%;
   }
 
 
-  .contact-box {
-    width: 30%;
-  }
+
 
   .client-project-box {
     width: 33%;
