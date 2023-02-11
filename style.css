@@ -501,8 +501,6 @@ header {
    
     background-image: url('img/bgbg.webp'),
     linear-gradient(to bottom, #0e121b 1%, #203681 50%, #0e121b 100% );
-    background-attachment: fixed;
-    background-size: cover;
     padding-block: 135px;
   }
 
