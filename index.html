@@ -374,18 +374,19 @@
     </section>
 
     <section id="form-details">
-        <form action="">
+        <form action="https://formsubmit.co/ledibajrami8@gmail.com" method="POST">
           <span>LEAVE A MESSAGE</span>
           <h2 class="ml10 afterh2-mobile">
             <span class="text-wrapper">
               <span class="letters">WE'D LOVE TO HEAR FROM YOU</span>
             </span>
           </h2>
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="E-mail">
-          <input type="text" placeholder="Subject">
-          <textarea placeholder="Your Message" name="" id="" cols="30" rows="10"></textarea>
-          <button class="card-btn">Submit</button>
+          <input type="text" placeholder="Your Name" name="name">
+          <input type="email" placeholder="E-mail" name="email">
+          <input type="text" placeholder="Subject" name="subject">
+          <input type="hidden" name="_next" value="https://codecraftt.netlify.app/">
+          <textarea placeholder="Your Message" name="message" id="" cols="30" rows="10"></textarea>
+          <button type="submit" class="card-btn" value="Submit">Submit</button>
         </form>
     </section>
 
